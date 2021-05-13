@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Javascript Object</title>
+    <script type="text/javascript">
+    // // 建立空白物件
+    // var point=new Object();
+    // // 建立物件的成員(屬性與方法)
+    // point.x=3;   // 物件中的成員x是3       // // 屬性
+    // point.y=4;   // 物件中的成員y是4       // // 屬性
+    // point.getPosition=function(){  //物件中的成員getPosition是一個函式function         // // 方法
+    //     alert(this.x+","+this.y)   //把點的座標印出來，this代表物件本身，物件本身的x就是當初我們建立的point.x=3
+    // }
+    // //使用物件
+    // alert(point.x);
+    // point.getPosition();   //呼叫函式
+
+    //綜合範例:遊戲中的玩家設計
+    var player=new Object();
+    player.name="john";
+    player.hp=100;
+    player.fight=function(){
+        this.hp=this.hp-2;
+    }
+    player.rest=function(){
+        this.hp++;
+    }
+    player.report=function(){
+        alert(this.name+": "+this.hp);
+    }
+    player.fight();
+    player.rest();
+    player.report();
+    </script>
+</head>
+<body>  
+</body>
+</html>

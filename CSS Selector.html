@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="uft-8"></meta>
+        <title>我的首頁</title>
+        <style type="text/css">
+            /* 標籤名稱選擇器 */
+            body{
+                font-size: 16px;font-family: "微軟正黑體";
+            }
+            h3{
+                font-size: 30px;text-decoration: underline;
+            }
+            /* class選擇器 */
+            /* 可以選擇套用在哪個標籤上，在.前面加上div標籤名稱 */
+            div.content{
+                padding: 10px;border: 1px dashed #5c5c5c;
+            }
+            /* id選擇器 */ 
+            /* 加 # 字號 */
+            #btn{
+                border: 1px solid #000000;
+                background-color: #ffffff;
+                padding: 5px;
+            }
+            /* 虛擬選擇器:搭配其他選擇器使用 */
+            /* :hover 虛擬選擇器:滑鼠一道目標上時，套用一組設定 */
+            #btn:hover{
+                background-color: #3a3a3a;
+            }
+            /* :focus 虛擬選擇器:當目標取得焦點時，套用一組設定 */
+            input:focus{
+                border: 2px solid #ff0000;
+                background: yellow;
+                color: red;
+            }
+            /* 階層式選擇器:搭配其他選擇器使用  */
+            .favorite a{
+                color: #0000ff;
+            }
+            .demo a{
+                color: #008800;
+            }
+        </style>
+
+    </head>
+    <body>
+        <h3>我的自我介紹</h3>
+        <div class="content">
+            大家好，我是景安
+        </div>
+        <h3>我的最愛連結</h3>
+        <ul class="favorite">
+            <li><a href="https://www.google.com/search?q=google&rlz=1C1GCEA_enTW797TW797&oq=google&aqs=chrome..69i57j69i59l3j0i433l2j0i131i433j0i433j0i131i433l2.3821j0j15&sourceid=chrome&ie=UTF-8">Google</a></li>
+            <li><a href="https://www.facebook.com/profile.php?id=100000185633358">Facebook</a></li>
+            <li><a href="https://www.ptt.cc/cls/1">PTT.cc</a></li>
+        </ul>
+        <h3>我的作品</h3>
+        <ul class="demo">
+            <li><a href="https://www.google.com/search?q=google&rlz=1C1GCEA_enTW797TW797&oq=google&aqs=chrome..69i57j69i59l3j0i433l2j0i131i433j0i433j0i131i433l2.3821j0j15&sourceid=chrome&ie=UTF-8">Google</a></li>
+            <li><a href="https://www.facebook.com/profile.php?id=100000185633358">Facebook</a></li>
+            <li><a href="https://www.ptt.cc/cls/1">PTT.cc</a></li>
+        </ul>
+        <h3>和我連絡</h3>
+        <div class="content">
+            填寫訊息 <input type="text" /> <button id="btn">送出</button>
+        </div>
+    </body>
+</html>
+

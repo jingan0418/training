@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>事件物件 Event Object</title>
+    <script type="text/javascript">
+        var timer;
+        function init(){
+            timer=window.document.getElementById("timer");
+            // window.setTimeout(countdown,1000);      // 一秒鐘之後倒數一次，執行一次就會停下來
+            window.setInterval(countdown,1000);        // 每一秒鐘執行一次countdown，不會停下來，不斷地執行
+        }
+        function countdown(){
+            timer.innerHTML=timer.innerHTML-1;
+            if(timer.innerHTML>0){                     // 還沒倒數到0，繼續倒數
+                // window.setTimeout(countdown,1000);  // 設setInterval就不用每一次都執行，它不會停下來
+            }else{                                     // 若已經倒數到0，做下列的事
+                window.document.location="https://www.youtube.com/";
+            }
+        }
+    </script>
+</head>
+<body onload="init();"> 
+    <span id="timer">3</span>
+</body>
+</html>
+

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Event 事件處理</title>
+    <script type="text/javascript">
+    // 用Javascript 的程式，動態的註冊事件處理器
+        function init(){
+            var btn=window.document.getElementById("btn"); // 把btn物件抓到我們程式的變數中
+            // btn.onclick=function(){
+            //     alert("Clicked");
+            // }
+            var handler=function(){
+                alert("Clicked");
+            };
+            btn.addEventListener("click" /*事件的名稱*/,handler);
+        }
+    </script>
+</head>
+<body onload="init();"> 
+    <!-- onload是一個事件，load事件註冊在body標籤上，會偵測網頁的靜態內容，
+        就是body的內入容是否完全載入，載入成功之後就會觸發load事件，
+        並起執行函式init()，網頁載入 -->
+    <button id="btn">Click</button>    
+</body>
+</html>
+

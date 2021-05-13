@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>HTML DOM</title>
+    <script type="text/javascript">
+        // alert(window.screen.width+"x"+window.screen.height);
+        function change(){
+            // window.document.body.innerHTML="Hello World"
+            // 系統內建的功能window.document.getElementById("")，給他參數""指名你要的id名稱，系統會去判斷有哪個id跟他一樣
+            var spanObj=window.document.getElementById("emotion");
+            spanObj.innerHTML="bad"; // 修改它的內文<span></span>
+            spanObj.style.color="red";
+            spanObj.style.fontWeight="bold";
+            // spanObj.style.display="none";
+        }
+    </script>
+</head>
+<body>
+    <!-- 事件處理，在任一標籤上加上 onclick="" 這個屬性，它就代表當使用者點擊這個標籤的時候，它做一個函式呼叫，執行出畫面 -->
+    <div>
+        <!-- 在這個標籤上，給他一個屬性id，隨便取emotion，代表他的身分證 -->
+        Today is <span id="emotion">good</span> day. Let's go to movie.
+    </div>
+    <button onclick="change();">Change</button>
+</body>
+</html>

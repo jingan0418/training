@@ -1,0 +1,36 @@
+<!-- 電腦中設定的資料夾 : C:\Users\janmub\www\網頁檔案 -->
+<!-- 伺服器的網址 : http://127.0.0.1:80/網頁檔案 -->
+
+<!-- 伺服器的網址 : http://127.0.0.1:80/page.html 主頁 -->
+<!-- 伺服器的網址 : http://127.0.0.1:80/popular.html  資料頁 -->
+<!-- 伺服器的網址 : http://127.0.0.1:80/latest.html 資料頁 -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Ajax 標籤選單</title>
+    <script type="text/javascript">
+        function getData(pageName){  // getData裡面做AJAX
+            // AJAX XMLHttpRequest 物件專門用來和伺服器做連線
+            var req=new XMLHttpRequest(); // 創立XMLHttpRequest這個物件
+            req.open("get","http://127.0.0.1/"+pageName);  // 設定連線的網址
+            req.onload=function(){
+                // 利用load事件偵測連線是否完成，如果連線完成觸發load事件做連線後的處理
+                var content=window.document.getElementById("content"); 
+                content.innerHTML=this.responseText;
+            }
+            req.send(); // 送出連線
+        }
+    </script>
+</head>
+<body> 
+    <div>
+        <span onclick="getData('popular.html')">熱門</span>     <!-- 在使用者點擊的時候呼叫getData -->
+        <span onclick="getData('latest.html')">最新</span>      <!-- 在使用者點擊的時候呼叫getData -->
+    </div>
+     <hr/>     <!-- 水平線 -->
+    <div id="content"></div>     <!-- 用來存放最後顯示結果 -->
+</body>
+</html>
+

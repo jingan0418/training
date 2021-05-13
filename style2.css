@@ -1,0 +1,50 @@
+body{margin: 0px;}
+
+/* nav樣式設定 */
+nav{
+    display: flex;           /* 容器的部分要設定顯示模式為flex */
+}
+nav>.logo{
+    /* 項目的部分要設定flex屬性為none，代表項目沒有辦法彈性自動縮放 */
+    flex: none;              /* 沒有彈性，固定尺寸 */        
+    width: 100px;
+    background-color: #ffcccc;
+}
+nav>.menu{
+    flex: auto;              /* 盡量把容器的空間佔滿 */
+    background-color: #ccccff;
+}
+nav>.user{
+    width: 100px;
+    background-color: #ccffcc;
+}
+
+/* main樣式設定 */
+/* Flex 如何解決:並排(切欄)、水平對齊、垂直對齊的問題 */
+main{                        /* 容器 */
+    display: flex;           /* 容器的部分要設定顯示模式為flex */
+    flex-wrap: wrap;
+    justify-content: center; /* 水平對齊，靠中 */
+    /* align-items: flex-start; 垂直對齊，靠上 */
+    background-color: #cccccc;
+}
+main>.item{                  /* 項目 */
+    flex: none;              
+    /* 項目的部分要設定flex屬性為none，代表項目沒有辦法彈性自動縮放 */
+    width: 270px; 
+    margin: 10px;
+    /* (270+20)<1200 */
+    background-color: #ffcccc;
+}
+@media (max-width:1200px){
+    main>.item{
+        width:45%;
+    }
+}
+@media (max-width:500px){
+    main>.item{
+        width:90%;
+    }
+}
+
+

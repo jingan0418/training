@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>宣告提升 Hoisting</title>
+    <script type="text/javascript">
+        // x=10;     //給定初始資料
+        // alert(x); // 使用變數
+        // var x;    // 宣告變數
+        // 一般程式語言，使用變數之前一調要先宣告變數，是一個好的習慣
+        // javascript的引擎在看你的程式的時候會做一個宣告提升，它會把這個變數宣告自動提升到最前面
+        
+
+        // alert(x);
+        // var x=10;    // 宣告變數，同時給定初始資料
+        // 會呈現undefined，因為它是給宣告提升，而不是初始資料提升
+        // 它會認為，會是長這樣
+        // var x; 
+        // alert(x);
+        // x=10;
+
+
+        // function test(){   // 函式的宣告
+        //     alert("Hello")
+        // }
+        // text(); // 呼叫函式
+
+
+        // test(); // 呼叫函式
+        // function test(){   // 函式的宣告
+        //     alert("Hello")
+        // }
+        // 函式的宣告也會跟變數的宣告一樣會提升
+
+
+        test(); // 呼叫函式
+        var test=function(){  // 函式的宣告
+            alert("Hello")
+        }
+        // var test;          // 提升的是這個
+        // test();            // 呼叫函式，但它不是函式，不能被呼叫，所以呈現undefined
+        // test=function(){   // 函式的宣告
+        //     alert("Hello")
+        // }
+
+    </script>
+</head>
+<body> 
+</body>
+</html>
+
